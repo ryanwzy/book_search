@@ -11,16 +11,17 @@
 </head>
 
 <body>
-        <video playsinline autoplay muted loop id="video">
+    <!--       <video playsinline autoplay muted loop id="video">
         <source src="video.mp4" type="video/mp4">
-    </video>
-  <!--   <iframe width="560" height="315" src="https://www.youtube.com/embed/mIYzp5rcTvU?start=600&controls=0&autoplay=1" frameborder="0" not-allow="accelerometer; autoplay=1; controls; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    </video> -->
+    <!--     <iframe width="560" height="315" src="https://www.youtube.com/embed/mIYzp5rcTvU?start=600&controls=0&autoplay=1" frameborder="0" not-allow="accelerometer; autoplay=1; controls; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+    <br><br><br><br><br>
     <form name="search" action="/search" id="searchForm" method="POST">
         <div class="input">
-            <label for="SearchBox">What do you want to read?</label>
+            <label for="SearchBox"><b>What do you want to read?</b></label>
             <input type="text" name="searchBox" id="SearchBox" autocomplete="off" required-field placeholder="Enter the book / author / type you want to read here">
             <br /> <br />
-            <button type="play" id="submit">Search</button>
+            <button type="play" id="submit"><b>Search</b></button>
         </div>
         <br>
     </form>
@@ -31,7 +32,7 @@
         </center>
     </div>
     <div id="not_match">
-        Sorry, We don't any relevant book.
+        Sorry, We can't find any relevant book.
     </div>
     <br /> <br /> <br /><br /> <br /> <br />
     <script src="scripts.js"></script>
