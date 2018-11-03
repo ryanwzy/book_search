@@ -78,7 +78,7 @@ form {
 form input[type=text],
 form input[type=password],
 form input[type=number] {
-    width: 500px;
+    width: 300px;
     padding: 10px;
     border: none;
 }
