@@ -1,6 +1,6 @@
 console.log("Ryan");
 
-(function musicDatabase() {
+(function bookDatabase() {
     this.init = function() {
         this.search();
     };
@@ -19,7 +19,7 @@ console.log("Ryan");
 
         });
     };
-    this.getData = function(artist) {
+    this.getData = function(keywords) {
         window.location.href = "#book_list";
         document.body.style.overflow = "scroll";
         var http = new XMLHttpRequest();
@@ -29,18 +29,17 @@ console.log("Ryan");
         http.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
         http.setRequestHeader("Access-Control-Allow-Origin", "*");
 
-        artist = artist.toString();
-        var url = "https://itunes.apple.com/search?term=" + artist + "&entity=ebook";
+        keywords = keywords.toString();
+        var url = "https://itunes.apple.com/search?term=" + keywords + "&entity=ebook";
         var method = "GET";
         var container = document.querySelector('#book_list_container');
         container.innerHTML = '';
 
-        http.open(method, url);
+        http.open(method, url, true);
         http.onreadystatechange = function() {
             if (http.readyState = 4 && http.status == 200) {
                 console.log("SUCCESS - connected to itunes API");
-
-                showArtist(JSON.parse(http.responseText));
+                showBook(JSON.parse(http.responseText));
             } else if (http.readyState == XMLHttpRequest.DONE && http.status != 200) {
                 console.log("ERROR - connecting to Itunes API")
             }
@@ -51,7 +50,7 @@ console.log("Ryan");
 
 
 
-    this.showArtist = function(obj) {
+    this.showBook = function(obj) {
 
         console.log(obj);
         var container = document.querySelector("#book_list_container");

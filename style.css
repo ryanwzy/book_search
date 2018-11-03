@@ -15,7 +15,7 @@ body {
     width: 100wh;
     height: 100vh;
 
-    background-image: linear-gradient(-20deg, #d82d13, #ff91bb, #23A6D5, #3cf2c7);
+    background-image: linear-gradient(-20deg, #ff5959, #ffc6dc, #46ceff, #00ffdc);
     background-color: black;
 
 }
@@ -110,7 +110,7 @@ button {
 
 button:hover {
     border-color: var(--hover);
-    color: black;
+    color: #0099bb;
 }
 
 button:focus {
